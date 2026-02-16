@@ -1,0 +1,39 @@
+competitors:
+- name: Click-up
+  pages:
+  - selector: ''
+    type: blog
+    url: https://clickup.com/blog/
+  - selector: ''
+    type: pricing
+    url: https://clickup.com/pricing
+  website: https://clickup.com
+- name: Monday.com
+  pages:
+  - selector: ''
+    type: blog
+    url: https://monday.com/blog
+  - selector: ''
+    type: pricing
+    url: https://monday.com/pricing
+  website: https://monday.com
+dashboard:
+  debug: true
+  host: 0.0.0.0
+  port: 5000
+notifications:
+  email:
+    enabled: false
+    recipient_emails:
+    - analyst@yourcompany.com
+    sender_email: your-email@gmail.com
+    sender_password: your-app-password
+    smtp_port: 587
+    smtp_server: smtp.gmail.com
+  slack:
+    enabled: false
+    webhook_url: https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+scraping:
+  check_interval_hours: 24
+  timeout: 30
+  user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
