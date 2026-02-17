@@ -1,0 +1,145 @@
+2026-02-17 18:49:34,827 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:49:34,948 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:49:34,948 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:49:34,952 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:49:34,953 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:49:34,953 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:49:34,959 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 18:49:36,879 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:49:36,880 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:49:36,881 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:49:36,883 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:49:36,884 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:49:36,884 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:49:36,890 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 18:49:53,347 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:49:58,084 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:49:59,361 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:49:59,983 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:50:08,093 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:50:11,352 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:50:48,322 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:50:48,324 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:50:48,324 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:50:48,326 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:50:48,327 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:50:48,327 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:50:48,332 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 18:50:50,011 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:50:50,013 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:50:50,013 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:50:50,016 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:50:50,016 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:50:50,016 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:50:50,022 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 18:50:53,773 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 18:52:07,667 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:52:07,670 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:52:07,670 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:52:07,673 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:52:07,674 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:52:07,674 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:52:07,682 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 18:52:15,241 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 18:52:15,243 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:52:15,243 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:52:15,247 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 18:52:15,247 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 18:52:15,248 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 18:52:15,252 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:09:19,280 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:09:19,282 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:09:19,283 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:09:19,285 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:09:19,285 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:09:19,286 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:09:19,291 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:09:21,057 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:09:21,058 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:09:21,059 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:09:21,061 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:09:21,061 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:09:21,062 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:09:21,068 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:10:57,130 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:10:57,132 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:10:57,132 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:10:57,134 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:10:57,135 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:10:57,135 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:10:57,139 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:10:58,955 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:10:58,956 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:10:58,957 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:10:58,959 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:10:58,959 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:10:58,960 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:10:58,965 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:12:12,980 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:12:12,983 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:12:12,985 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:12:12,988 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:12:12,989 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:12:12,989 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:12:12,993 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:12:15,089 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:12:15,094 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:12:15,095 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:12:15,098 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:12:15,098 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:12:15,099 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:12:15,104 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:15:01,201 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:15:01,204 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:01,204 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:01,206 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:01,207 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:01,207 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:15:01,212 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:15:03,021 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:15:03,024 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:03,024 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:03,027 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:03,027 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:03,028 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:15:03,037 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:15:59,005 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:15:59,006 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:59,007 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:59,009 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:15:59,009 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:15:59,010 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:15:59,014 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:16:00,838 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:16:00,839 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:16:00,840 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:16:00,842 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:16:00,843 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:16:00,843 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:16:00,849 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:16:13,203 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 19:16:16,628 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 19:16:17,742 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 19:16:18,202 - competitor_dashboard - WARNING - Failed to load from new structure, using fallback: '_GeneratorContextManager' object has no attribute 'close'
+2026-02-17 19:37:04,101 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:37:04,103 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:37:04,103 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:37:04,105 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:37:04,105 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:37:04,106 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:37:04,110 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:39:56,653 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:39:56,655 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:39:56,655 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:39:56,658 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:39:56,658 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:39:56,659 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:39:56,664 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:39:58,560 - competitor_dashboard - INFO - Configuration loaded from config.yaml
+2026-02-17 19:39:58,562 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:39:58,563 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:39:58,565 - competitor_dashboard.database - INFO - Database schema initialized successfully
+2026-02-17 19:39:58,566 - competitor_dashboard.database - INFO - Database initialized: competitor_data.db
+2026-02-17 19:39:58,566 - competitor_dashboard - INFO - Database and scraper initialized successfully
+2026-02-17 19:39:58,575 - competitor_dashboard - INFO - Starting dashboard on 0.0.0.0:5000 (debug=True)
+2026-02-17 19:40:10,594 - competitor_dashboard.database - INFO - Competitor deleted: Clickup

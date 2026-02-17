@@ -29,16 +29,18 @@ def _clean_text(text: str) -> str:
 
 def _is_valid_price(text: str) -> bool:
     """
-    UPDATED: Validation rule to check if text looks like a price.
-    Must contain a digit and generic currency symbol or keyword.
+    FIXED: Validation rule to check if text looks like a price.
+    Must contain a digit and generic currency symbol or keyword, OR be "free".
     """
     if not text:
         return False
-    # Check for digits
+    # Allow "free" without digits
+    if re.search(r'\bfree\b', text, re.IGNORECASE):
+        return True
+    # Otherwise require digit + currency
     if not re.search(r'\d', text):
         return False
-    # Check for currency symbols or 'free'
-    return bool(re.search(r'[\$€£¥]|free|usd|eur', text, re.IGNORECASE))
+    return bool(re.search(r'[\$€£¥]|usd|eur', text, re.IGNORECASE))
 
 def extract_pricing(html: str) -> dict:
     """
@@ -94,7 +96,7 @@ def extract_pricing(html: str) -> dict:
 
 def _extract_from_table(soup: BeautifulSoup) -> list[dict]:
     """
-    UPDATED: detailed extraction from <table> elements.
+    FIXED: Detailed extraction from <table> elements.
     Looks for headers to identify 'Plan' and 'Price' columns.
     """
     tables = soup.find_all("table")
@@ -116,20 +118,29 @@ def _extract_from_table(soup: BeautifulSoup) -> list[dict]:
         rows = table.find_all("tr")
         
         # If headers not in <th>, check first <tr>
+        header_row_idx = -1
         if plan_idx == -1 and rows:
             first_row_cells = [td.get_text(strip=True).lower() for td in rows[0].find_all(["td", "th"])]
             for i, h in enumerate(first_row_cells):
-                 if _fuzzy_match(h, PLAN_KEYWORDS): plan_idx = i
-                 if _fuzzy_match(h, PRICING_KEYWORDS): price_idx = i
+                 if _fuzzy_match(h, PLAN_KEYWORDS): 
+                     plan_idx = i
+                     header_row_idx = 0
+                 if _fuzzy_match(h, PRICING_KEYWORDS): 
+                     price_idx = i
+                     header_row_idx = 0
 
         # Extract data from rows
-        for row in rows:
-            cells = row.find_all(["td", "th"])
-            if not cells: continue
+        for row_num, row in enumerate(rows):
+            # FIXED: Skip the actual header row if we identified it
+            if header_row_idx != -1 and row_num == header_row_idx:
+                continue
             
-            # Skip header row itself
-            row_text = row.get_text(strip=True).lower()
-            if _fuzzy_match(row_text, PLAN_KEYWORDS) and _fuzzy_match(row_text, PRICING_KEYWORDS):
+            # Also skip if this row only contains header elements
+            if row.find_all('th') and not row.find_all('td'):
+                continue
+            
+            cells = row.find_all(["td", "th"])
+            if not cells: 
                 continue
 
             name, price = None, None
@@ -151,7 +162,7 @@ def _extract_from_table(soup: BeautifulSoup) -> list[dict]:
                          if not _is_valid_price(text):
                              name = text
 
-            if name and (price or _is_valid_price(price)):
+            if name and price:
                 extracted_plans.append({
                     "name": name, 
                     "price": price, 
@@ -193,7 +204,7 @@ def _extract_from_cards(soup: BeautifulSoup) -> list[dict]:
 
 def _extract_from_visual_columns(soup: BeautifulSoup) -> list[dict]:
     """
-    UPDATED: Fallback logic. content grouping by parent.
+    FIXED: Fallback logic. Content grouping by parent.
     Looks for siblings with 'price' patterns.
     """
     price_pattern = re.compile(r"[\$€£¥]\s*\d+|free", re.IGNORECASE)
@@ -207,7 +218,8 @@ def _extract_from_visual_columns(soup: BeautifulSoup) -> list[dict]:
         parent = p.find_parent(['div', 'section', 'li'])
         if parent:
             pid = id(parent)
-            if pid not in parents: parents[pid] = []
+            if pid not in parents: 
+                parents[pid] = []
             parents[pid].append(parent)
 
     # If we find a parent with multiple price-containing children, likely a grid
@@ -215,17 +227,39 @@ def _extract_from_visual_columns(soup: BeautifulSoup) -> list[dict]:
     if parents:
         # Get the parent with the most price children (likely the grid wrapper)
         best_parent_id = max(parents, key=lambda k: len(parents[k]))
-        # The children of this wrapper are likely the cards
-        # Note: this is a simplification, might need to go up one level
-        wrapper = parents[best_parent_id][0].parent 
+        # FIXED: The parent itself is the wrapper we want, not its parent
+        wrapper = parents[best_parent_id][0]
         
         if wrapper:
-            # Iterate direct children of the detected wrapper
-            for child in wrapper.find_all(recursive=False):
+            # First, try to find a common parent that contains all pricing cards
+            # Look for the wrapper's children that are likely individual cards
+            potential_cards = []
+            
+            # Check if the wrapper has children that look like pricing cards
+            for child in wrapper.find_all(['div', 'article', 'section'], recursive=False):
                 if isinstance(child, Tag):
-                    plan = _extract_single_plan_content(child)
+                    child_text = child.get_text()
+                    if price_pattern.search(child_text):
+                        potential_cards.append(child)
+            
+            # If we found multiple cards at this level, use them
+            if len(potential_cards) > 1:
+                for card in potential_cards:
+                    plan = _extract_single_plan_content(card)
                     if plan['name'] and _is_valid_price(plan['price']):
                         plans.append(plan)
+            else:
+                # Otherwise, go one level up and try again
+                wrapper_parent = wrapper.parent
+                if wrapper_parent:
+                    for child in wrapper_parent.find_all(['div', 'article', 'section'], recursive=False):
+                        if isinstance(child, Tag):
+                            child_text = child.get_text()
+                            if price_pattern.search(child_text):
+                                plan = _extract_single_plan_content(child)
+                                if plan['name'] and _is_valid_price(plan['price']):
+                                    plans.append(plan)
+                                    
     return plans
 
 def _extract_single_plan_content(container: Tag) -> dict:
@@ -250,7 +284,7 @@ def _extract_single_plan_content(container: Tag) -> dict:
     # Fallback: Search in text lines
     if not price:
         for line in lines:
-            if price_pattern.match(line): # strict match at start
+            if price_pattern.search(line):  # Use search instead of match for flexibility
                 price = line
                 break
     
@@ -274,7 +308,7 @@ def _extract_single_plan_content(container: Tag) -> dict:
     else:
         # Fallback: Look for lines with checkmarks or specific keywords
         for line in lines:
-            if re.match(r'^[✓\+]|include', line, re.I):
+            if re.match(r'^[✓✔\+•]|include', line, re.I):
                 features.append(line)
 
     return {
